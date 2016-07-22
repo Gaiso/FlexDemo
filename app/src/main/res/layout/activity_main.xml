@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flex.jie.flexdemo.widget.CustomCoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.flex.jie.flexdemo.widget.CustomCollapsingToolbarLayout
+        android:id="@+id/layout_collapse"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:collapseHeight="49dp"
+        app:layoutScrim="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/car"/>
+
+        <com.flex.jie.flexdemo.widget.HorizontalFlexSearchView
+            android:id="@+id/horizontal_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:background_color_after="@color/bg_orange"
+            app:background_color_before="@color/white"
+            app:collapseMode="parallax"
+            app:corner_radiu="3dp"
+            app:drawScrim="always"
+            app:parallax_range="10dp"
+            app:right_offset="30dp"
+            app:search_icon_after="@mipmap/icon_search"
+            app:search_icon_before="@mipmap/icon_gray_search"
+            app:search_text="大家都在搜：汽车"
+            app:text_color_after="@color/text_orange"
+            app:text_color_before="@color/text_gray"
+            app:text_size="15sp"/>
+
+    </com.flex.jie.flexdemo.widget.CustomCollapsingToolbarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.flex.jie.flexdemo.widget.CustomCoordinatorLayout>

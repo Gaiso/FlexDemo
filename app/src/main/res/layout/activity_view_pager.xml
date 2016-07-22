@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flex.jie.flexdemo.widget.CustomCoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.flex.jie.flexdemo.widget.CustomCollapsingToolbarLayout
+        android:id="@+id/layout_collapse"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:collapseHeight="94dp"
+        app:layoutScrim="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/car2"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@android:color/transparent"
+            app:collapseMode="pin"
+            app:drawScrim="always">
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_deep_color_listen_click"
+                android:onClick="onBackClick"
+                android:padding="15dp"
+                android:src="@mipmap/icon_return"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ib_back"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/white"/>
+
+    </com.flex.jie.flexdemo.widget.CustomCollapsingToolbarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.flex.jie.flexdemo.widget.CustomCoordinatorLayout>

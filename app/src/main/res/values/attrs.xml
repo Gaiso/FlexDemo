@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomCollapsingToolbarLayout_LayoutParams">
+        <attr name="collapseMode">
+            <enum name="none" value="0"/>
+            <enum name="pin" value="1"/>
+            <enum name="parallax" value="2"/>
+        </attr>
+        <attr name="drawScrim">
+            <enum name="never" value="0"/>
+            <enum name="always" value="1"/>
+        </attr>
+        <attr name="parallax_range" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomCollapsingToolbarLayout">
+        <attr name="layoutScrim" format="reference"/>
+        <attr name="collapseHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalFlexSearchView">
+        <attr name="corner_radiu" format="dimension"/>
+        <attr name="background_color_before" format="color"/>
+        <attr name="background_color_after" format="color"/>
+        <attr name="search_text" format="string"/>
+        <attr name="text_color_before" format="color"/>
+        <attr name="text_color_after" format="color"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="search_icon_before" format="reference"/>
+        <attr name="search_icon_after" format="reference"/>
+        <attr name="left_offset" format="dimension"/>
+        <attr name="right_offset" format="dimension"/>
+    </declare-styleable>
+
+</resources>
