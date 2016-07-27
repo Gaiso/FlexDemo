@@ -1,16 +1,18 @@
-package com.flex.jie.flexdemo.widget;
+package com.gaiso.flex_view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.RelativeLayout;
 
-import com.flex.jie.flexdemo.R;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
  * Created by Jie on 2016/7/11.
@@ -238,25 +240,25 @@ public class CustomCollapsingToolbarLayout extends RelativeLayout implements ICo
             super(source);
         }
 
-//        public LayoutParams(RelativeLayout.LayoutParams source) {
-//            super(source);
-//        }
+        public LayoutParams(RelativeLayout.LayoutParams source) {
+            super(source);
+        }
 
 
-//        @IntDef({
-//                COLLAPSE_MODE_NONE,
-//                COLLAPSE_MODE_PIN,
-//                COLLAPSE_MODE_PARALLAX
-//        })
-//        @Retention(RetentionPolicy.SOURCE)
-//        @interface CollapseMode {
-//        }
+        @IntDef({
+                COLLAPSE_MODE_NONE,
+                COLLAPSE_MODE_PIN,
+                COLLAPSE_MODE_PARALLAX
+        })
+        @Retention(RetentionPolicy.SOURCE)
+        @interface CollapseMode {
+        }
 
         public void setCollapseMode(/*@CollapseMode*/ int collapseMode) {
             mCollapseMode = collapseMode;
         }
 
-        //        @CollapseMode
+        @CollapseMode
         public int getCollapseMode() {
             return mCollapseMode;
         }

@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.flex.jie.flexdemo.widget.IScrollHandler;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

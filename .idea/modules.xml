@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FlexDemo.iml" filepath="$PROJECT_DIR$/FlexDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flex-view/flex-view.iml" filepath="$PROJECT_DIR$/flex-view/flex-view.iml" />
     </modules>
   </component>
 </project>

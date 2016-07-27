@@ -1,4 +1,4 @@
-package com.flex.jie.flexdemo.widget;
+package com.gaiso.flex_view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -139,7 +139,7 @@ public class CustomCoordinatorLayout extends LinearLayout {
     }
 
     /**
-     * å¿…é¡»è°ƒç”¨è¯¥æ–¹æ³•
+     * ±ØÐëµ÷ÓÃ¸Ã·½·¨
      *
      * @param scrollHandler
      */
@@ -304,7 +304,7 @@ public class CustomCoordinatorLayout extends LinearLayout {
         if (mScroller.computeScrollOffset()) {
             int distance = mScroller.getCurrY() - mScrollY;
 
-            if (distance > 0) {//æ‰‹åŠ¿å¾€ä¸Šæ»‘
+            if (distance > 0) {//ÊÖÊÆÍùÉÏ»¬
                 if (!mCollapseHeader.isTotalCollapsed()) {
                     move(-distance);
                 } else {
@@ -312,7 +312,7 @@ public class CustomCoordinatorLayout extends LinearLayout {
                         mScroller.abortAnimation();
                     mScrollHandler.scrollBy(distance);
                 }
-            } else {//æ‰‹åŠ¿å¾€ä¸‹æ»‘
+            } else {//ÊÖÊÆÍùÏÂ»¬
                 if (!mCollapseHeader.isTotalExpand() && mScrollHandler.isTop()) {
                     move(-distance);
                 }
@@ -344,7 +344,7 @@ public class CustomCoordinatorLayout extends LinearLayout {
         int distance = 0;
         int collapseHeight = mCollapseHeader.getCollapseHeight();
 
-        if (delta < 0) {//æ‰‹åŠ¿å‘ä¸Šæ»‘
+        if (delta < 0) {//ÊÖÊÆÏòÉÏ»¬
             if (bottom == collapseHeight) {
                 distance = 0;
             } else if (bottom + delta > collapseHeight) {

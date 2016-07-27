@@ -9,10 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.flex.jie.flexdemo.widget.CustomCollapsingToolbarLayout;
-import com.flex.jie.flexdemo.widget.CustomCoordinatorLayout;
 import com.flex.jie.flexdemo.widget.HorizontalFlexSearchView;
-import com.flex.jie.flexdemo.widget.IScrollHandler;
+import com.gaiso.flex_view.CustomCollapsingToolbarLayout;
+import com.gaiso.flex_view.CustomCoordinatorLayout;
+import com.gaiso.flex_view.IScrollHandler;
 
 import java.util.ArrayList;
 import java.util.Collections;
