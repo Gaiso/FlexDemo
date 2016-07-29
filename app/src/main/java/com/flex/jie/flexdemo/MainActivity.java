@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity implements CustomCoordinator
     CustomCoordinatorLayout coordinatorLayout;
     ListAdapter adapter;
 
-    private String mItemData = "Lorem Ipsum is simply dummy text of the printing and " +
-            "when an unknown printer took a galley of type and scrambled it to make a type specimen book It has!!!";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +39,7 @@ public class MainActivity extends AppCompatActivity implements CustomCoordinator
         collapsingToolbarLayout = (CustomCollapsingToolbarLayout) findViewById(R.id.layout_collapse);
         coordinatorLayout = (CustomCoordinatorLayout) findViewById(R.id.layout_coordinator);
 
-        String[] listItems = mItemData.split(" ");
-
-        List<String> list = new ArrayList<String>();
-        Collections.addAll(list, listItems);
-
-        adapter = new ListAdapter(this, list);
+        adapter = new ListAdapter(this, generateData(30));
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new ListAdapter.onItemClickListener() {
             @Override
@@ -87,6 +79,14 @@ public class MainActivity extends AppCompatActivity implements CustomCoordinator
             collapsingToolbarLayout.setCollapseHeight(oldHeight + deltaHeight);
         }
 
+    }
+
+    private List<String> generateData(int count) {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            list.add("Item " + i);
+        }
+        return list;
     }
 
     private int getStatusBarHeight() {
