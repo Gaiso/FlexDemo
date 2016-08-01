@@ -80,7 +80,8 @@
     app:layoutScrim 设置颜色
 #####对子view的设置
     app:collapseMode none(默认）,pin(offset变化时该子view位置固定),parallax(与parallax_range一起设置)
-    app:drawScrim="always" 设置scrim显示在哪个子view后面
+    app:drawScrim="always" 设置scrim覆盖哪些子view（按照子view draw的顺序，一般看xml的顺序，
+    例如子view3设置了always,scrim将覆盖子view1和2）
     app:parallax_range="10dp" 随着收缩百分比变化的范围
 
     
